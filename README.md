@@ -1,2 +1,0 @@
-# expo-notifications
-testing notifications
