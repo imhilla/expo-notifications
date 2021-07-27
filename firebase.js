@@ -1,4 +1,4 @@
-import firebase from 'firebase/app';
+import firebase from 'firebase';
 
 // Optionally import the services that you want to use
 //import "firebase/auth";
@@ -17,4 +17,9 @@ const firebaseConfig = {
   appId: "1:834961288202:web:632b867607c2a82ee083f3"
 };
 
-firebase.initializeApp(firebaseConfig);
+const firebaseApp = firebase.initializeApp(firebaseConfig);
+const db = firebaseApp.database();
+const dbRef = firebase.database().ref();
+const auth = firebase.auth();
+
+export { db, auth, dbRef };

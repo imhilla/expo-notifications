@@ -2,7 +2,10 @@ import Constants from 'expo-constants';
 import * as Notifications from 'expo-notifications';
 import React, { useState, useEffect, useRef } from 'react';
 import { Text, View, Button, Platform } from 'react-native';
-
+import { auth } from './firebase';
+const userid = 'gfg0JHWi0DWItPV9WXJqIrVS5Uu1'
+import { db } from './firebase';
+import { dbRef } from './firebase';
 Notifications.setNotificationHandler({
   handleNotification: async () => ({
     shouldShowAlert: true,
@@ -95,6 +98,10 @@ async function registerForPushNotificationsAsync() {
       lightColor: '#FF231F7C',
     });
   }
+
+  db.ref('users/' + userid).set({
+    expoPushToken: token
+  })
 
   return token;
 }
