@@ -1,12 +1,4 @@
 import firebase from 'firebase';
-
-// Optionally import the services that you want to use
-//import "firebase/auth";
-//import "firebase/database";
-//import "firebase/firestore";
-//import "firebase/functions";
-//import "firebase/storage";
-
 // Initialize Firebase
 const firebaseConfig = {
   apiKey: "AIzaSyBZglzo6Rt6DGRumBsFzaM-ocMjsl-b_t8",
